@@ -11,14 +11,13 @@ body{
  font-family:sans-serif;
  background:linear-gradient(135deg,#ffd6e7,#ffe4ec,#fff0f5);
  margin:0;
- padding:20px;
- overflow:hidden;
+ padding:15px;
 }
 
-/* flowers background */
+/* flowers */
 .flower{
- position:absolute;
- font-size:24px;
+ position:fixed;
+ font-size:22px;
  animation:fall linear infinite;
 }
 
@@ -27,41 +26,42 @@ body{
  to{transform:translateY(110vh)}
 }
 
-/* main card */
+/* card */
 .container{
  background:white;
- padding:25px;
- border-radius:20px;
+ padding:20px;
+ border-radius:18px;
  display:inline-block;
  box-shadow:0 10px 30px rgba(0,0,0,0.1);
- margin-top:40px;
+ margin-top:20px;
+ max-width:420px;
+ width:95%;
 }
 
 /* image */
 .promise-img{
- width:300px;
- border-radius:15px;
- margin-top:15px;
+ width:260px;
+ border-radius:12px;
+ margin-top:10px;
 }
 
-/* headings */
-h1{
- color:#d63384;
-}
+/* text */
+h1{ color:#d63384; margin:5px; }
+h2{ margin:5px; }
 
 .msg{
- font-size:18px;
- margin-top:15px;
+ font-size:16px;
+ margin-top:10px;
  color:#7b2cbf;
 }
 
 /* button */
 button{
- padding:12px 25px;
- font-size:16px;
+ padding:10px 22px;
+ font-size:15px;
  border:none;
  border-radius:25px;
- margin-top:15px;
+ margin-top:12px;
  cursor:pointer;
  background:#ff4da6;
  color:white;
@@ -70,16 +70,15 @@ button{
 /* promise text */
 #promiseText{
  display:none;
- margin-top:20px;
- font-size:18px;
+ margin-top:15px;
+ font-size:16px;
  color:#6a1b9a;
- line-height:1.6;
- animation:fade 1s ease;
-}
-
-@keyframes fade{
- from{opacity:0; transform:scale(.9)}
- to{opacity:1; transform:scale(1)}
+ line-height:1.5;
+ max-height:250px;
+ overflow-y:auto;
+ padding:10px;
+ border-radius:10px;
+ background:#fff0f6;
 }
 
 </style>
@@ -87,9 +86,8 @@ button{
 
 <body>
 
-<!-- flower animation start -->
 <script>
-for(let i=0;i<30;i++){
+for(let i=0;i<25;i++){
  let f=document.createElement("div");
  f.className="flower";
  f.innerHTML="🌸";
@@ -115,7 +113,7 @@ Today on this day I want to promise you…
 
 <div id="promiseText">
 “I promise to stay... not just when it's easy, but when life gets hard, confusing & unfair.  
-To listen when you talk, to notice the little things you don't say and to grow with you slowly, gently, consistently. <br><br>
+To listen when you talk, to notice the little things you don't say and to grow with you slowly, gently, consistently.<br><br>
 
 Because loving you isn't a one day promise.  
 It's an everyday choice… And I choose you. Always and forever… my love” ♥️🧿
@@ -124,11 +122,9 @@ It's an everyday choice… And I choose you. Always and forever… my love” �
 </div>
 
 <script>
-
 function openPromise(){
  document.getElementById("promiseText").style.display="block";
 }
-
 </script>
 
 </body>
