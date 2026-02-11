@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Promise Day ❤️</title>
 
+<style>
+
+body{
+ text-align:center;
+ font-family:sans-serif;
+ background:linear-gradient(135deg,#ffd6e7,#ffe4ec,#fff0f5);
+ margin:0;
+ padding:20px;
+ overflow:hidden;
+}
+
+/* flowers background */
+.flower{
+ position:absolute;
+ font-size:24px;
+ animation:fall linear infinite;
+}
+
+@keyframes fall{
+ from{transform:translateY(-10vh)}
+ to{transform:translateY(110vh)}
+}
+
+/* main card */
+.container{
+ background:white;
+ padding:25px;
+ border-radius:20px;
+ display:inline-block;
+ box-shadow:0 10px 30px rgba(0,0,0,0.1);
+ margin-top:40px;
+}
+
+/* image */
+.promise-img{
+ width:300px;
+ border-radius:15px;
+ margin-top:15px;
+}
+
+/* headings */
+h1{
+ color:#d63384;
+}
+
+.msg{
+ font-size:18px;
+ margin-top:15px;
+ color:#7b2cbf;
+}
+
+/* button */
+button{
+ padding:12px 25px;
+ font-size:16px;
+ border:none;
+ border-radius:25px;
+ margin-top:15px;
+ cursor:pointer;
+ background:#ff4da6;
+ color:white;
+}
+
+/* promise text */
+#promiseText{
+ display:none;
+ margin-top:20px;
+ font-size:18px;
+ color:#6a1b9a;
+ line-height:1.6;
+ animation:fade 1s ease;
+}
+
+@keyframes fade{
+ from{opacity:0; transform:scale(.9)}
+ to{opacity:1; transform:scale(1)}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- flower animation start -->
+<script>
+for(let i=0;i<30;i++){
+ let f=document.createElement("div");
+ f.className="flower";
+ f.innerHTML="🌸";
+ f.style.left=Math.random()*100+"vw";
+ f.style.animationDuration=(Math.random()*3+3)+"s";
+ document.body.appendChild(f);
+}
+</script>
+
+<div class="container">
+
+<h1>Hi my loveee ❤️</h1>
+
+<h2>Happy Promise Day Mistuu 💖</h2>
+
+<img src="promise.jpg" class="promise-img">
+
+<div class="msg">
+Today on this day I want to promise you…
+</div>
+
+<button onclick="openPromise()">Open 💌</button>
+
+<div id="promiseText">
+“I promise to stay... not just when it's easy, but when life gets hard, confusing & unfair.  
+To listen when you talk, to notice the little things you don't say and to grow with you slowly, gently, consistently. <br><br>
+
+Because loving you isn't a one day promise.  
+It's an everyday choice… And I choose you. Always and forever… my love” ♥️🧿
+</div>
+
+</div>
+
+<script>
+
+function openPromise(){
+ document.getElementById("promiseText").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
